@@ -1,0 +1,13 @@
+.opinionContainer {
+  display: inline-block;
+  padding: 10px;
+}
+
+.opinionContentContainer {
+  margin: 0;
+  padding: 0;
+}
+
+.opinionContent {
+  list-style-type: none;
+}

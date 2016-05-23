@@ -5,9 +5,39 @@
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
     </head>
     <body>
-        <script src="http://www.backbonejs.org/backbone.js"></script>
+        <script type="text/template" id="opinionTemplate">
+            <ul class="opinionContentContainer">
+                <li class="opinionContent">
+                    <div><%= maleTitle %></div>
+                    <div><%= maleContent %></div>
+                    <button class="voteMale">+1</button>
+                </li>
+                <li class="opinionContent">
+                    <div><%= femaleTitle %></div>
+                    <div><%= femaleContent %></div>
+                    <button class="voteFemale">+1</button>
+                </li>
+            </ul>
+            <button class="delete">Delete</button>
+        </script>
         <script src="http://www.underscorejs.org/underscore.js"></script>
         <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+        <script src="http://www.backbonejs.org/backbone.js"></script>
+        <script src="js/models/Opinion.js"></script>
+        <script src="js/collections/Opinions.js"></script>
+        <script src="js/views/opinion.js"></script>
+        <script src="js/views/opinionCollection.js"></script>
         <script src="js/App.js"></script>
+        <div id="opinions">
+            <form id="addOpinion" action="#">
+                <div>
+                    <label for="titleMale">Title: </label><input id="opinionTitleMale" />
+                    <label for="contentMale">Male: </label><textarea id="opinionContentMale"></textarea>
+                    <label for="titleFemale">Title: </label><input id="opinionTitleFemale" />
+                    <label for="contentFemale">Female: </label><textarea id="opinionContentFemale"></textarea>
+                    <button id="addNewOpinion">Add</button>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
